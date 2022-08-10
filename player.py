@@ -19,7 +19,7 @@ class PlayerHuman:
         k = 1
         while count != 8:
             if count < 2:  # creating of 3-cell ship
-                s = input(f"Please input index {k} of 3-cell ship or R if you wanna reset desk: ")
+                s = input(f"Please input index (2-digit number) for {k} of 3-cell ship OR R if you wanna reset desk: ")
                 if s == "R":
                     desk.reset_desk()
                     count = 1
@@ -51,7 +51,7 @@ class PlayerHuman:
                             print("Indexes aren't neighbours, try again")
                             k = 1
             if 1 < count < 4:  # 2-cell ships
-                s = input(f"Please input index {k} of the {count - 1} 2-cell ship or R if you wanna reset desk: ")
+                s = input(f"Please input index (2-digit number) for {k} of the {count - 1} 2-cell ship OR R if you wanna reset desk: ")
                 if s == "R":
                     desk.reset_desk()
                     count = 1
@@ -84,7 +84,7 @@ class PlayerHuman:
                             print("Indexes aren't neighbours, try again")
                             k = 1
             if 3 < count < 8:  # 1-cell ships
-                s = input(f"Please input index of the {count - 3} 1-cell ship or R if you wanna reset desk: ")
+                s = input(f"Please input index (2-digit number) for {count - 3} 1-cell ship OR R if you wanna reset desk: ")
                 if s == "R":
                     desk.reset_desk()
                     count = 1
