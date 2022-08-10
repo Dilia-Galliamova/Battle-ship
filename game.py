@@ -27,7 +27,7 @@ while desk_1.get_list_of_ships() and desk_2.get_list_of_ships():
     if tumbler == 1:  # the move of human player
         print("Your rival's desk:")
         desk_1.print_field(2)
-        index = input("Take a move on rival's field: ")
+        index = input("Take a move (2-digit number) on rival's field: ")
         try:
             trigger_exception(index)
         except ValueError:
