@@ -17,9 +17,10 @@ class PlayerHuman:
     def init_desk(self, desk):
         count = 1
         k = 1
+        print("Please follow the instruction to enter ship indexes one by one. Index is a 2-digit number (for example 11, 12 etc.)")
         while count != 8:
             if count < 2:  # creating of 3-cell ship
-                s = input(f"Please input index (2-digit number) for {k} of 3-cell ship OR R if you wanna reset desk: ")
+                s = input(f"Input {k} index for 3-cell ship OR R to reset desk and start again: ")
                 if s == "R":
                     desk.reset_desk()
                     count = 1
@@ -28,7 +29,7 @@ class PlayerHuman:
                 try:
                     trigger_exception(s)
                 except ValueError:
-                    print("Index isn't a number or is out of range")
+                    print("Index isn't a number or out of range")
                     continue
                 else:
                     if k == 1:  # the 1st index
@@ -51,7 +52,7 @@ class PlayerHuman:
                             print("Indexes aren't neighbours, try again")
                             k = 1
             if 1 < count < 4:  # 2-cell ships
-                s = input(f"Please input index (2-digit number) for {k} of the {count - 1} 2-cell ship OR R if you wanna reset desk: ")
+                s = input(f"Input {k} index for {count - 1} 2-cell ship OR R to reset desk and start again: ")
                 if s == "R":
                     desk.reset_desk()
                     count = 1
@@ -60,7 +61,7 @@ class PlayerHuman:
                 try:
                     trigger_exception(s)
                 except ValueError:
-                    print("Index isn't a number or is out of range")
+                    print("Index isn't a number or out of range")
                     continue
                 else:
                     if k == 1:  # the 1st index
@@ -84,7 +85,7 @@ class PlayerHuman:
                             print("Indexes aren't neighbours, try again")
                             k = 1
             if 3 < count < 8:  # 1-cell ships
-                s = input(f"Please input index (2-digit number) for {count - 3} 1-cell ship OR R if you wanna reset desk: ")
+                s = input(f"Input index for {count - 3} 1-cell ship OR R to reset desk and start again: ")
                 if s == "R":
                     desk.reset_desk()
                     count = 1
@@ -93,7 +94,7 @@ class PlayerHuman:
                 try:
                     trigger_exception(s)
                 except ValueError:
-                    print("Index isn't a number or is out of range")
+                    print("Index isn't a number or out of range")
                     continue
                 else:
                     x = int(s)
