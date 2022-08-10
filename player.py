@@ -22,6 +22,7 @@ class PlayerHuman:
             if count < 2:  # creating of 3-cell ship
                 s = input(f"Input {k} index for 3-cell ship OR R to reset desk and start again: ")
                 if s == "R":
+                    print("Please follow the instruction to enter ship indexes one by one. Index is a 2-digit number (for example 11, 12 etc.)")
                     desk.reset_desk()
                     count = 1
                     k = 1
@@ -54,6 +55,7 @@ class PlayerHuman:
             if 1 < count < 4:  # 2-cell ships
                 s = input(f"Input {k} index for {count - 1} 2-cell ship OR R to reset desk and start again: ")
                 if s == "R":
+                    print("Please follow the instruction to enter ship indexes one by one. Index is a 2-digit number (for example 11, 12 etc.)")
                     desk.reset_desk()
                     count = 1
                     k = 1
@@ -87,6 +89,7 @@ class PlayerHuman:
             if 3 < count < 8:  # 1-cell ships
                 s = input(f"Input index for {count - 3} 1-cell ship OR R to reset desk and start again: ")
                 if s == "R":
+                    print("Please follow the instruction to enter ship indexes one by one. Index is a 2-digit number (for example 11, 12 etc.)")
                     desk.reset_desk()
                     count = 1
                     k = 1
