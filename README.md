@@ -1,4 +1,4 @@
 # SkillFactory_C2
-Home task for C2
+game Battleship with AI 
 
-Run Game.py for game 
+Run play.py for game 
